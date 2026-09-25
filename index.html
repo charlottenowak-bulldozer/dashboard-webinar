@@ -1,0 +1,447 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Webinars Live Hubspot</title>
+<style>
+  :root{color-scheme:light;
+    --ink:#111110;--paper:#e9e9e2;--card:#ffffff;--muted:#7c7c74;--soft:#555550;--body:#333330;--line:#dcdcd4;--rule:#111110;
+    --yellow:#DDFF56;--green:#c9efb4;--green-d:#3f8f2e;--blue:#bfe6f0;--blue-d:#2b7d90;--purple:#ddd6f7;--purple-d:#3b2a72;--lime:#eaf79f;--gray:#e6e6e0;--gray-d:#777770;--red:#b00020;--cancel:#f2c7c7;
+    --t1:#DDFF56;--t2:#bfe6f0;--t3:#ddd6f7;--t0:#d8d8d0;--tn:#efefe8;--tn-line:#c8c8c0;
+    --tile-ink:#111110;--link-line:#cccccc;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){color-scheme:dark;
+      --ink:#f0f0ea;--paper:#151514;--card:#1f1f1d;--muted:#9a9a92;--soft:#b8b8b0;--body:#d4d4cc;--line:#34342f;--rule:#f0f0ea;
+      --green-d:#8fd67a;--blue-d:#7cc9dc;--purple-d:#c2b6f2;--gray:#3a3a36;--gray-d:#b0b0a8;--red:#ff7a8a;--link-line:#55554f;
+      --t0:#4a4a44;--tn:#2b2b28;--tn-line:#44443e;}
+  }
+  :root[data-theme="dark"]{color-scheme:dark;
+    --ink:#f0f0ea;--paper:#151514;--card:#1f1f1d;--muted:#9a9a92;--soft:#b8b8b0;--body:#d4d4cc;--line:#34342f;--rule:#f0f0ea;
+    --green-d:#8fd67a;--blue-d:#7cc9dc;--purple-d:#c2b6f2;--gray:#3a3a36;--gray-d:#b0b0a8;--red:#ff7a8a;--link-line:#55554f;
+    --t0:#4a4a44;--tn:#2b2b28;--tn-line:#44443e;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);
+    font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.5;padding-block:34px 60px;padding-inline:42px;-webkit-font-smoothing:antialiased}
+  .eyebrow{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+  h1{font-family:"Arial Black","Helvetica Neue",Impact,sans-serif;font-weight:900;font-size:60px;line-height:.95;letter-spacing:-1.5px;text-transform:uppercase;margin:8px 0 12px}
+  .lede{font-size:13px;color:var(--soft);max-width:660px}
+  .lede b{color:var(--ink)}
+  header{position:relative}
+  .legend{position:absolute;top:2px;right:0;display:grid;grid-template-columns:auto auto;gap:6px 22px}
+  .legend .li{display:flex;align-items:center;gap:8px;font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
+  .sq{width:13px;height:13px;border-radius:3px;border:1px solid rgba(0,0,0,.12);flex:none}
+  .rule{border-top:2px solid var(--rule);margin:24px 0 0}
+  .status{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10.5px;color:var(--muted);margin-top:10px}
+  .spin{display:inline-block;width:10px;height:10px;border:2px solid var(--line);border-top-color:var(--ink);border-radius:50%;animation:sp .8s linear infinite;vertical-align:middle;margin-right:5px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){.spin{animation:none}}
+  .banner{margin-top:12px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:12px;color:var(--body)}
+  .banner b{color:var(--ink)}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:26px 0 10px}
+  .stat{border-radius:9px;padding:16px 18px 18px;min-height:104px;color:var(--tile-ink)}
+  .stat.c1{background:var(--yellow)}
+  .stat.c2{background:var(--blue)}
+  .stat.c3{background:var(--green)}
+  .stat.c4{background:var(--purple)}
+  .stat.c5{background:var(--lime)}
+  .stat .k{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(17,17,16,.6);margin-bottom:10px}
+  .stat .v{font-size:32px;font-weight:800;line-height:1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+  .stat .s{font-size:10.5px;color:rgba(17,17,16,.55);margin-top:7px}
+
+  .wsec{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 28px 26px;margin-top:22px}
+  .wmeta{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .dot{width:9px;height:9px;border-radius:2px;flex:none}
+  .wtitle{font-size:22px;font-weight:800;letter-spacing:-.3px;margin:9px 0 18px;text-wrap:balance}
+  .mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px 20px;margin-bottom:18px}
+  .mini .k{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .mini .v{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+
+  /* --- Tiering --- */
+  .tsec{border-top:1px solid var(--line);margin-top:4px;padding-top:16px}
+  .thead{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:9px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .tbar{display:flex;width:100%;height:20px;border-radius:4px;overflow:hidden;background:var(--tn);border:1px solid var(--tn-line)}
+  .tbar span{display:block;height:100%}
+  .tbar .s1{background:var(--t1)}
+  .tbar .s2{background:var(--t2)}
+  .tbar .s3{background:var(--t3)}
+  .tbar .s0{background:var(--t0)}
+  .tbar .sn{background:transparent}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:12px;margin-top:12px}
+  .tcell{border:1px solid var(--line);border-radius:7px;padding:9px 11px 10px;border-left-width:4px}
+  .tcell.s1{border-left-color:var(--t1)}
+  .tcell.s2{border-left-color:var(--t2)}
+  .tcell.s3{border-left-color:var(--t3)}
+  .tcell.s0{border-left-color:var(--t0)}
+  .tcell.sn{border-left-color:var(--tn-line)}
+  .tcell .k{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:8.5px;letter-spacing:.7px;text-transform:uppercase;color:var(--muted)}
+  .tcell .v{font-size:19px;font-weight:800;line-height:1.15;margin-top:4px;font-variant-numeric:tabular-nums}
+  .tcell .s{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+  .toggle{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--ink);background:none;border:0;border-top:1px solid var(--line);cursor:pointer;user-select:none;display:flex;align-items:center;gap:7px;padding:8px 0;width:100%;text-align:left;margin-top:16px}
+  .toggle:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .toggle .chev{transition:transform .15s}
+  .toggle.open .chev{transform:rotate(90deg)}
+  .tablewrap{overflow-x:auto}
+  .deals{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+  .deals th{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);text-align:right;padding:8px 10px;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+  .deals th:first-child,.deals td:first-child{text-align:left}
+  .deals th.l,.deals td.l{text-align:left}
+  .deals td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:11.5px;color:var(--body);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .deals td.name{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:600;color:var(--ink);white-space:normal;min-width:180px}
+  .deals a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--link-line)}
+  .deals a:hover,.deals a:focus-visible{border-color:var(--ink)}
+  .badge{display:inline-block;font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9px;letter-spacing:.4px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-weight:600}
+  .b-signed{background:var(--green);color:#2c6b1f}
+  .b-open{background:var(--blue);color:#1f5f6e}
+  .b-created{background:var(--purple);color:#3b2a72}
+  .b-ctx{background:var(--gray);color:var(--gray-d)}
+  .st-Gagné{color:var(--green-d);font-weight:700}
+  .st-Perdu{color:var(--red)}
+  .st-Ouvert{color:var(--soft)}
+  .nolist{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);margin-top:4px;padding-top:14px}
+  .hserr{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10.5px;letter-spacing:.3px;color:var(--red);border-top:1px solid var(--line);margin-top:4px;padding-top:14px}
+  .dnote{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:9.5px;color:var(--muted);margin-top:10px;line-height:1.7;letter-spacing:.3px}
+  .dnote b{color:var(--body)}
+  .foot{font-family:"SFMono-Regular","Consolas","Menlo",monospace;font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-top:34px}
+  .err{color:var(--red)}
+  @media(max-width:720px){body{padding-block:24px 40px;padding-inline:16px}h1{font-size:40px}.legend{position:static;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px}.wsec{padding:20px 16px}}
+</style>
+
+<header>
+  <div class="eyebrow">Dashboard · Webinars Bulldozer — Pipeline live</div>
+  <h1>Webinars</h1>
+  <p class="lede">Suivi pipeline <b>live depuis HubSpot</b> par liste d'inscrits. L'influence est mesurée sur la <b>date de signature</b> : seul un deal gagné <i>après</i> le webinar est compté comme influencé. Le pipeline et la répartition par tier ne sont mesurés que pour les webinars avec une liste HubSpot rattachée.</p>
+  <div class="legend">
+    <div class="li"><span class="sq" style="background:var(--green)"></span>Signé post-webinar</div>
+    <div class="li"><span class="sq" style="background:var(--blue)"></span>Pipeline en cours</div>
+    <div class="li"><span class="sq" style="background:var(--purple)"></span>Créé post-webinar</div>
+    <div class="li"><span class="sq" style="background:var(--gray)"></span>Contexte (antérieur)</div>
+  </div>
+</header>
+<div class="rule"></div>
+<div class="status" id="status"><span class="spin"></span>Chargement HubSpot…</div>
+<div id="banner"></div>
+
+<div class="strip" id="strip"></div>
+<div id="tierglobal"></div>
+<div id="content"></div>
+
+<div class="foot" id="foot">Bulldozer · Field Marketing — recharge la page pour rafraîchir la couche HubSpot.</div>
+
+<script>
+// Métriques LinkedIn = snapshot figé au 23/09/2026 (voir LI_ASOF). Republier l'artifact pour les rafraîchir.
+const LI_ASOF="23 septembre 2026";
+const WEBINARS=[
+  {name:"Budget marketing 2027 et IA",date:"2026-10-06",status:"À venir",
+   li:{registrants:48,audience:40,audienceKind:"visites page",watchTime:null,engRate:2.8,comments:0},listId:null},
+  {name:"Réactiver son pipeline dormant",date:"2026-10-01",status:"À venir",
+   li:{registrants:30,audience:32,audienceKind:"visites page",watchTime:null,engRate:2.5,comments:0},listId:null},
+  {name:"Sales + marketing : construire la coalition qui fait du revenu",date:"2026-09-24",status:"À venir",
+   li:{registrants:81,audience:80,audienceKind:"visites page",watchTime:null,engRate:2.0,comments:0},listId:null},
+  {name:"Former son équipe marketing à l'IA en 90 jours (avec UnlockM)",date:"2026-09-17",status:"Terminé",
+   li:{registrants:97,audience:171,audienceKind:"visiteurs live",watchTime:"6m49s",engRate:6.7,comments:21},listId:"2044"},
+  {name:"Machine d'acquisition IA-native : le système Bulldozer",date:"2026-08-27",status:"Terminé",
+   li:{registrants:139,audience:255,audienceKind:"visiteurs live",watchTime:"4m43s",engRate:8.1,comments:30},listId:"2031"},
+  {name:"Créer la demande quand vous n'avez plus de leads",date:"2026-06-30",status:"Terminé",
+   li:{registrants:352,audience:364,audienceKind:"visites page",watchTime:null,engRate:9.0,comments:24},listId:"1645"},
+  {name:"De l'ABM à l'ABX : Le playbook Bulldozer",date:"2026-04-30",status:"Annulé",
+   li:{registrants:277,audience:351,audienceKind:"visites page",watchTime:null,engRate:5.2,comments:10},listId:null},
+  {name:"Structurer sa team marketing à l'ère de l'IA",date:"2026-04-03",status:"Terminé",
+   li:{registrants:121,audience:712,audienceKind:"visiteurs live",watchTime:"2m33s",engRate:7.6,comments:40},listId:null},
+  {name:"AI-Marketing Stack : 4 use cases pour transformer votre marketing",date:"2026-02-25",status:"Terminé",
+   li:{registrants:502,audience:1535,audienceKind:"visiteurs live",watchTime:"5m34s",engRate:9.6,comments:213},listId:null},
+  {name:"Masterclass : SEO & IA",date:"2025-09-19",status:"Terminé",
+   li:{registrants:581,audience:1178,audienceKind:"visiteurs live",watchTime:"7m05s",engRate:9.3,comments:86},listId:null}
+];
+const SERVER="HubSpot", TOOL="search_crm_objects";
+// Le tiering est porté par la fiche ENTREPRISE (propriété "tiers", calculée dans Zapier).
+const TIERS=[
+  {k:"1",label:"Tier 1",cls:"s1"},
+  {k:"2",label:"Tier 2",cls:"s2"},
+  {k:"3",label:"Tier 3",cls:"s3"},
+  {k:"0",label:"Hors cible",cls:"s0"},
+  {k:"none",label:"Sans tier",cls:"sn"}
+];
+const dash="—";
+const fmtInt=n=>(n==null||isNaN(n))?dash:Math.round(n).toLocaleString("fr-FR");
+const fmtEur=n=>(n==null||isNaN(n))?dash:(n===0?"0 €":Math.round(n).toLocaleString("fr-FR")+" €");
+const fmtPct=n=>(n==null||isNaN(n))?dash:(n).toFixed(1).replace(".",",")+" %";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const insights={chatInsights:{userIntent:"Live webinar dashboard pipeline from HubSpot lists",satisfaction:"NEUTRAL"}};
+const isClosed=s=>s==="closedwon"||s==="closedlost";
+const emptyHS=()=>({registrants:null,withDeals:null,linked:null,signedPost:null,openPost:null,createdPost:null,deals:null,error:null});
+const emptyTier=()=>({accounts:null,contacts:null,totalAccounts:null,error:null});
+
+let MCP=null;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function hs(args){
+  const call=()=>MCP.callTool(SERVER,TOOL,{...args,...insights},{cache:{staleTime:60000,gcTime:600000}});
+  let r;
+  try{ r=await call(); }
+  catch(e){
+    if(e&&e.retryable){ await sleep((e.retryAfterMs||800)+Math.random()*600); r=await call(); }
+    else throw e;
+  }
+  let p=r.payload;
+  if(typeof p==="string"){try{p=JSON.parse(p);}catch(_){}}
+  return p||{};
+}
+
+function errText(e){
+  const c=e&&e.code;
+  switch(c){
+    case "needs_reauth": return "Connexion HubSpot expirée — reconnecte HubSpot dans claude.ai → Paramètres → Connecteurs.";
+    case "server_not_connected": case "server_not_found": return "Connecteur HubSpot absent — ajoute HubSpot dans claude.ai → Paramètres → Connecteurs.";
+    case "selection_required": return "Plusieurs connecteurs HubSpot — choisis celui à utiliser dans l'invite claude.ai, puis recharge.";
+    case "not_in_manifest": case "consent_required": return "Accès HubSpot non autorisé pour cette page.";
+    case "blocked_by_policy": case "approval_required": return "Accès HubSpot bloqué par la politique de ton organisation.";
+    case "server_unavailable": case "rate_limited": return "HubSpot ne répond pas pour l'instant — recharge dans quelques instants.";
+    case "tool_error": return "HubSpot a renvoyé une erreur : "+(e.message||"requête refusée");
+    default: return "Erreur HubSpot"+(e&&e.message?" : "+e.message:"");
+  }
+}
+
+async function listContactIds(listId,cap){
+  const ids=[];let offset=0,total=null,guard=0;
+  do{
+    const r=await hs({objectType:"CONTACT",filterGroups:[{filters:[{propertyName:"ilsListIds",operator:"IN",values:[listId]}]}],properties:["hs_object_id"],limit:100,offset});
+    (r.results||[]).forEach(c=>{const n=parseInt(c.id);if(n)ids.push(n);});
+    total=r.total||0;offset=r.offset||0;
+    if(!(r.results||[]).length) break;
+  }while(ids.length<total && ids.length<cap && ++guard<12);
+  return {ids,total};
+}
+
+async function pullTiers(w,contactIds){
+  const out=emptyTier();
+  const byTier={};const seen=new Set();
+  for(let i=0;i<contactIds.length;i+=100){
+    const chunk=contactIds.slice(i,i+100);
+    let offset=0,total=null,got=0,guard=0;
+    do{
+      const r=await hs({objectType:"COMPANY",filterGroups:[{associatedWith:[{objectType:"contacts",operator:"IN",objectIdValues:chunk}]}],properties:["tiers"],limit:100,offset});
+      const rows=r.results||[];
+      rows.forEach(c=>{
+        if(seen.has(c.id))return;seen.add(c.id);
+        const raw=String((c.properties||{}).tiers||"");
+        const k=["0","1","2","3"].includes(raw)?raw:"none";
+        (byTier[k]=byTier[k]||[]).push(parseInt(c.id));
+      });
+      got+=rows.length;total=r.total||0;offset=r.offset||0;
+      if(!rows.length) break;
+    }while(got<total && ++guard<8);
+  }
+  const accounts={},contacts={};let totalAccounts=0;
+  for(const t of TIERS){
+    const comps=byTier[t.k]||[];
+    accounts[t.k]=comps.length;totalAccounts+=comps.length;
+    if(!comps.length){contacts[t.k]=0;continue;}
+    let n=0;
+    for(let i=0;i<comps.length;i+=100){
+      const r=await hs({objectType:"CONTACT",filterGroups:[{
+        filters:[{propertyName:"ilsListIds",operator:"IN",values:[w.listId]}],
+        associatedWith:[{objectType:"companies",operator:"IN",objectIdValues:comps.slice(i,i+100)}]}],
+        properties:["hs_object_id"],limit:1});
+      n+=r.total||0;
+    }
+    contacts[t.k]=n;
+  }
+  out.accounts=accounts;out.contacts=contacts;out.totalAccounts=totalAccounts;
+  return out;
+}
+
+async function pullHubSpot(w){
+  const out=emptyHS();
+  const size=await hs({objectType:"CONTACT",filterGroups:[{filters:[{propertyName:"ilsListIds",operator:"IN",values:[w.listId]}]}],properties:["hs_object_id"],limit:1});
+  out.registrants=size.total;
+  const withDeals=await hs({objectType:"CONTACT",filterGroups:[{filters:[
+      {propertyName:"ilsListIds",operator:"IN",values:[w.listId]},
+      {propertyName:"num_associated_deals",operator:"GT",value:"0"}]}],properties:["hs_object_id"],limit:100});
+  out.withDeals=withDeals.total;
+  const ids=(withDeals.results||[]).map(c=>parseInt(c.id)).filter(Boolean);
+  if(ids.length){
+    const deals=await hs({objectType:"DEAL",filterGroups:[{associatedWith:[{objectType:"contacts",operator:"IN",objectIdValues:ids.slice(0,100)}]}],
+      properties:["dealname","amount_in_home_currency","deal_currency_code","dealstage","createdate","closedate"],limit:100});
+    const urlTpl=deals.urlTemplate||"https://app.hubspot.com/contacts/143561253/record/0-3/{id}";
+    let linked=0,signed=0,open=0,created=0;const list=[];
+    (deals.results||[]).forEach(d=>{
+      const p=d.properties||{};const amt=parseFloat(p.amount_in_home_currency)||0;const stage=p.dealstage||"";
+      const cd=(p.closedate||"").slice(0,10);const crd=(p.createdate||"").slice(0,10);
+      linked++;
+      const isSigned=stage==="closedwon" && cd && cd>=w.date;
+      const isOpen=!isClosed(stage) && cd && cd>=w.date;
+      const isCreated=crd && crd>=w.date;
+      if(isSigned) signed+=amt;
+      if(isOpen) open+=amt;
+      if(isCreated) created++;
+      const statut=isClosed(stage)?(stage==="closedwon"?"Gagné":"Perdu"):"Ouvert";
+      list.push({id:d.id,name:p.dealname||d.displayName||"Deal",amount:p.amount_in_home_currency?amt:null,
+        statut,cd,crd,isSigned,isOpen,isCreated,url:urlTpl.replace("{id}",d.id)});
+    });
+    const rank=x=>x.isCreated?0:(x.isSigned?1:(x.isOpen?2:3));
+    list.sort((a,b)=>rank(a)-rank(b)||(b.amount||0)-(a.amount||0));
+    out.linked=linked;out.signedPost=signed;out.openPost=open;out.createdPost=created;out.deals=list;
+  }else{
+    out.linked=0;out.signedPost=0;out.openPost=0;out.createdPost=0;out.deals=[];
+  }
+  return out;
+}
+
+function tierBar(counts,total){
+  if(!total) return "";
+  const seg=TIERS.map(t=>{
+    const n=counts[t.k]||0;if(!n)return"";
+    return '<span class="'+t.cls+'" style="width:'+(n/total*100).toFixed(2)+'%"></span>';
+  }).join("");
+  return '<div class="tbar" role="img" aria-label="Répartition par tier">'+seg+'</div>';
+}
+function tierCells(tier){
+  const accT=TIERS.reduce((a,t)=>a+(tier.accounts[t.k]||0),0);
+  return TIERS.map(t=>{
+    const a=tier.accounts[t.k]||0;const c=tier.contacts[t.k]||0;
+    const share=accT?Math.round(a/accT*100):0;
+    return '<div class="tcell '+t.cls+'"><div class="k">'+t.label+'</div>'+
+      '<div class="v">'+fmtInt(a)+' <span style="font-size:11px;font-weight:600;color:var(--muted)">comptes</span></div>'+
+      '<div class="s">'+fmtInt(c)+' inscrits · '+share+' %</div></div>';
+  }).join("");
+}
+function tierBlock(tier,label){
+  if(tier.error) return '<div class="tsec"><div class="hserr" style="border:0;margin:0;padding:0">'+esc(errText(tier.error))+'</div></div>';
+  if(!tier.accounts) return "";
+  const accT=TIERS.reduce((a,t)=>a+(tier.accounts[t.k]||0),0);
+  const hot=(tier.accounts["1"]||0)+(tier.accounts["2"]||0)+(tier.accounts["3"]||0);
+  return '<div class="tsec"><div class="thead"><span>'+esc(label)+'</span>'+
+    '<span>'+fmtInt(accT)+' comptes · '+fmtInt(hot)+' tiérés T1–T3</span></div>'+
+    tierBar(tier.accounts,accT)+'<div class="tgrid">'+tierCells(tier)+'</div></div>';
+}
+
+function dealBadge(d){
+  if(d.isCreated) return '<span class="badge b-created">Créé post</span>';
+  if(d.isSigned) return '<span class="badge b-signed">Signé post</span>';
+  if(d.isOpen) return '<span class="badge b-open">Pipeline</span>';
+  return '<span class="badge b-ctx">Contexte</span>';
+}
+function dealsTable(h,i){
+  const list=h.deals||[];
+  if(!list.length) return '<div class="nolist">Aucun deal rattaché aux inscrits de cette liste</div>';
+  const body=list.map(d=>'<tr>'+
+    '<td class="name"><a href="'+esc(d.url)+'" target="_blank" rel="noopener">'+esc(d.name)+'</a></td>'+
+    '<td>'+(d.amount==null?dash:fmtEur(d.amount))+'</td>'+
+    '<td class="st-'+d.statut+'">'+d.statut+'</td>'+
+    '<td>'+(d.crd||dash)+'</td><td>'+(d.cd||dash)+'</td>'+
+    '<td class="l">'+dealBadge(d)+'</td></tr>').join("");
+  return '<button type="button" class="toggle" data-t="'+i+'" aria-expanded="false" aria-controls="deals-'+i+'"><span class="chev">▸</span> '+list.length+' deals rattachés · '+list.filter(d=>d.isCreated).length+' créés post-webinar</button>'+
+    '<div class="tablewrap" id="deals-'+i+'" hidden><table class="deals"><thead><tr>'+
+      '<th class="l">Deal</th><th>Montant</th><th>Statut</th><th>Créé le</th><th>Clôture</th><th class="l">Attribution</th>'+
+    '</tr></thead><tbody>'+body+'</tbody></table>'+
+    '<div class="dnote">Clique un deal → fiche HubSpot. <b>Signé post</b> = gagné après le webinar (influence) · <b>Pipeline</b> = ouvert, clôture après · <b>Créé post</b> = nouveau deal post-webinar · <b>Contexte</b> = deal antérieur, non attribué.</div></div>';
+}
+
+const CAT={Terminé:"var(--green)",Annulé:"var(--cancel)",Planifié:"var(--blue)","À venir":"var(--purple)"};
+function render(rows,showHSErrors){
+  const sum=f=>rows.reduce((a,r)=>a+(f(r)||0),0);
+  const hasHS=rows.some(r=>r.hs.registrants!=null);
+  const nbSigned=rows.reduce((a,r)=>a+((r.hs.deals||[]).filter(d=>d.isSigned).length),0);
+  const tierRows=rows.filter(r=>r.tier&&r.tier.accounts);
+  const t1=tierRows.reduce((a,r)=>a+(r.tier.accounts["1"]||0),0);
+  const cards=[
+    {k:"Inscrits (LinkedIn)",v:fmtInt(sum(r=>r.w.li.registrants))},
+    {k:"Audience event",v:fmtInt(sum(r=>r.w.li.audience)),s:"vues page / live"},
+    {k:"Inscrits en liste HS",v:hasHS?fmtInt(sum(r=>r.hs.registrants)):dash},
+    {k:"Comptes Tier 1",v:tierRows.length?fmtInt(t1):dash,s:"entreprises T1 inscrites"},
+    {k:"Signé post-webinar",v:hasHS?fmtEur(sum(r=>r.hs.signedPost)):dash,s:hasHS?nbSigned+" deal(s) · influence signature":"HubSpot indisponible"},
+    {k:"Pipeline en cours",v:hasHS?fmtEur(sum(r=>r.hs.openPost)):dash,s:"clôture prévue post-webinar"},
+    {k:"Créés post-webinar",v:hasHS?fmtInt(sum(r=>r.hs.createdPost)):dash,s:"génération de pipeline"}
+  ];
+  const pal=["c1","c2","c3","c4","c5"];
+  document.getElementById("strip").innerHTML=cards.map((c,i)=>'<div class="stat '+pal[i%pal.length]+'">'+
+    '<div class="k">'+c.k+'</div><div class="v">'+c.v+'</div>'+(c.s?'<div class="s">'+c.s+'</div>':"")+'</div>').join("");
+
+  // Répartition tiers agrégée
+  const gt=document.getElementById("tierglobal");
+  if(tierRows.length){
+    const agg={accounts:{},contacts:{},totalAccounts:0,error:null};
+    TIERS.forEach(t=>{
+      agg.accounts[t.k]=tierRows.reduce((a,r)=>a+(r.tier.accounts[t.k]||0),0);
+      agg.contacts[t.k]=tierRows.reduce((a,r)=>a+(r.tier.contacts[t.k]||0),0);
+    });
+    gt.innerHTML='<div class="wsec"><div class="wmeta"><span class="dot" style="background:var(--t1)"></span>Répartition par tier · '+tierRows.length+' webinar(s) avec liste HS</div>'+
+      '<div class="wtitle">Qui s\'inscrit, par tier de compte</div>'+
+      '<p class="lede" style="margin-bottom:4px">Le tier vient de la fiche <b>entreprise</b> HubSpot. Un compte peut apparaître sur plusieurs webinars : les totaux ci-dessous additionnent les webinars, ils ne dédoublonnent pas entre eux.</p>'+
+      tierBlock(agg,"Tous webinars avec liste")+'</div>';
+  }else{gt.innerHTML="";}
+
+  document.getElementById("content").innerHTML=rows.map(({w,hs:h,tier},i)=>{
+    const mini=[
+      {k:"Inscrits (LinkedIn)",v:fmtInt(w.li.registrants)},
+      {k:"Audience "+(w.li.audienceKind||""),v:fmtInt(w.li.audience)},
+      {k:"Temps visionnage",v:w.li.watchTime||dash},
+      {k:"Taux d'engagement",v:fmtPct(w.li.engRate)},
+      {k:"Commentaires",v:fmtInt(w.li.comments)}
+    ];
+    if(w.listId){
+      mini.push({k:"Inscrits liste HS",v:fmtInt(h.registrants)});
+      mini.push({k:"Signé post €",v:h.signedPost==null?dash:fmtEur(h.signedPost)});
+      mini.push({k:"Pipeline en cours €",v:h.openPost==null?dash:fmtEur(h.openPost)});
+    }
+    const dt=new Date(w.date+"T12:00:00").toLocaleDateString("fr-FR",{day:"2-digit",month:"long",year:"numeric"}).toUpperCase();
+    let pipe="",tb="";
+    if(!w.listId) pipe='<div class="nolist">Pas de liste HubSpot rattachée — métriques LinkedIn uniquement, pipeline et tiers non mesurés</div>';
+    else if(h.error) pipe=showHSErrors?'<div class="hserr">'+esc(errText(h.error))+'</div>':'<div class="nolist">Pipeline HubSpot non chargé</div>';
+    else pipe=dealsTable(h,i);
+    if(w.listId&&tier) tb=tierBlock(tier,"Répartition par tier");
+    return '<div class="wsec">'+
+      '<div class="wmeta"><span class="dot" style="background:'+(CAT[w.status]||'var(--gray)')+'"></span>'+dt+' · Webinar'+(w.listId?" · Liste HS "+esc(w.listId):" · sans liste HS")+' · '+esc(w.status)+'</div>'+
+      '<div class="wtitle">'+esc(w.name)+'</div>'+
+      '<div class="mini">'+mini.map(m=>'<div><div class="k">'+m.k+'</div><div class="v">'+m.v+'</div></div>').join("")+'</div>'+
+      tb+pipe+
+    '</div>';
+  }).join("");
+
+  document.querySelectorAll(".toggle").forEach(t=>{
+    t.addEventListener("click",()=>{
+      const tb=document.getElementById("deals-"+t.getAttribute("data-t"));
+      tb.hidden=!tb.hidden;const open=!tb.hidden;
+      t.classList.toggle("open",open);t.setAttribute("aria-expanded",String(open));
+    });
+  });
+}
+
+async function init(){
+  const st=document.getElementById("status");
+  const banner=document.getElementById("banner");
+  const rows=WEBINARS.map(w=>({w,hs:emptyHS(),tier:null}));
+  render(rows,false); // LinkedIn tout de suite, HubSpot en surcouche
+  try{ MCP=window.claude&&window.claude.use?await window.claude.use("mcp"):null; }catch(_){MCP=null;}
+  if(!MCP){
+    st.textContent="Métriques LinkedIn : snapshot du "+LI_ASOF+" — pipeline HubSpot non disponible dans cette vue";
+    banner.innerHTML='<div class="banner"><b>HubSpot non connecté ici.</b> Ouvre la page dans claude.ai avec le connecteur HubSpot pour voir le pipeline live et la répartition par tier.</div>';
+    return;
+  }
+  const errors=[];
+  for(const r of rows){
+    if(!r.w.listId) continue;
+    st.innerHTML='<span class="spin"></span>HubSpot — '+esc(r.w.name)+'…';
+    try{
+      r.hs=await pullHubSpot(r.w);
+      const {ids}=await listContactIds(r.w.listId,600);
+      r.tier=await pullTiers(r.w,ids);
+    }catch(e){
+      console.error("HubSpot "+r.w.name,e);
+      if(!r.hs||r.hs.registrants==null){r.hs=emptyHS();r.hs.error=e||{};}
+      if(!r.tier){r.tier=emptyTier();r.tier.error=e||{};}
+      errors.push(e||{});
+    }
+  }
+  const withList=rows.filter(r=>r.w.listId).length;
+  const sameCode=errors.length&&errors.length===withList&&errors.every(e=>e.code===errors[0].code);
+  render(rows,!sameCode);
+  if(sameCode){
+    banner.innerHTML='<div class="banner err">'+esc(errText(errors[0]))+'</div>';
+    st.textContent="Métriques LinkedIn : snapshot du "+LI_ASOF+" — pipeline HubSpot non chargé";
+  }else{
+    st.textContent="Pipeline HubSpot et tiers à jour · "+new Date().toLocaleString("fr-FR")+" — Métriques LinkedIn : snapshot du "+LI_ASOF;
+  }
+}
+init();
+</script>
+
+</body></html>
